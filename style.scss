@@ -1,0 +1,113 @@
+@mixin size($width, $height: $width) {
+      width: $width;
+      height: $height;
+}
+
+@mixin attribute($name, $value, $to, $newValue: $value) { 
+	&[#{$name}=#{$value}], row[#{$name}=#{$value}], column[#{$name}=#{$value}]{
+		#{$to}: #{$newValue};
+	}
+}
+
+@function getRandomColor() {
+	$red: random(256)-1;
+	$green: random(256)-1;
+	$blue: random(256)-1;
+	$color: rgb($red,$green,$blue);
+	@return $color;
+}
+
+html,body{
+	height: auto;
+}
+body{
+	margin: 0;
+}
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(50,50,50,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.debug{
+	// outline: 1px solid #09f;
+}
+
+@for $i from 1 through 20{
+
+	*[ flex-#{$i * 5} ]{
+		flex: 0 0 #{$i * 5 + '%'};
+	}
+}
+@for $i from 1 through 20{
+
+	span:nth-child(#{$i}){
+		background-color: getRandomColor();
+	}
+	div:nth-child(#{$i}){
+		background-color: getRandomColor();
+	}
+}
+
+*[flex]{
+	display: flex;
+}
+
+grid{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	&[wrap], row[wrap], column[wrap],&[wrap="true"], row[wrap="true"], column[wrap="true"]{
+		flex-wrap: wrap;
+	}
+	&[wrap="false"], row[wrap="false"], column[wrap="false"]{
+		flex-wrap: wrap;
+	}
+
+	@include attribute('content','space-around','justify-content');
+	@include attribute('content','space-between','justify-content');
+	@include attribute('content','center','justify-content');
+	@include attribute('content','flex-start','justify-content');
+	@include attribute('content','flex-end','justify-content');
+	
+	@include attribute('align','center','align-items');
+	@include attribute('align','base-line','align-items');
+	@include attribute('align','flex-start','align-items');
+	@include attribute('align','flex-end','align-items');
+	@include attribute('align','stretch','align-items');
+
+	&[column]{
+		flex-direction: column;
+	}
+
+	&[row]{
+		flex-direction: row;
+	}
+
+	row{
+		display: flex;
+		flex-direction: row;
+		flex: 1 0 ;
+	}
+	column{
+		display: flex;
+		flex-direction: column;
+		flex: 1 0 ;
+	}
+}
+
+*[fill]{
+	width: 100%;
+	height: 100%;
+}

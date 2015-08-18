@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Layout 1</title>
+	<link rel="stylesheet" href="../style.css">
+	<style>
+
+	box{
+		background-color: #000;
+		outline: 1px solid #123;
+		box-shadow: 0px 0px 3px 3px black;
+		padding: 2px;
+	}
+
+	html{
+		padding: 10px 40px;
+		background-color: #eee;
+	}
+
+	#main{
+		height: 400px;
+	}
+	
+	.feature{
+		height: 200px;
+	}
+	.feature:first-child{
+		margin-right: 15px;
+	}
+
+	row:last-child{
+		margin-bottom: 0px;
+	}
+	row{
+		margin-bottom: 15px;
+	}
+
+	#header row{
+		margin-bottom: 0px;
+	}
+	#nav box{
+		margin-right: 20px;
+	}
+	#nav box:last-child{
+		margin-right: 0px;
+	}
+	</style>
+</head>
+<body>
+	<grid column >
+		<row flex-5 id="header">
+			<row content="flex-start" align="center">
+				<box>My logo here</box>
+			</row>
+			<row flex-85 content="flex-end" align="center" id="nav">
+				<box>Link 1</box>
+				<box>Link 2</box>
+				<box>Link 3</box>
+				<box>Link 3</box>
+				<box>Link 3</box>
+				<box>Link 3</box>
+				<box>Link 3</box>
+			</row>
+		</row>
+		<row flex-70 id="main">
+			<box fill>
+				main content
+			</box>
+		</row>
+		<row flex-5>
+			<box fill class="feature">aaaaa</box>
+			<box fill class="feature">ssss</box>
+		</row>
+	</grid>
+</body>
+</html>

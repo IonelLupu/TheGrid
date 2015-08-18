@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grid System</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<style>
+	@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
+	body{
+		color: #C5C5C5;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size: 14px;
+	}
+	column{
+		padding: 5px;
+	}
+
+	grid *{
+		/*outline: 1px solid #aaa;*/
+	}
+	grid column:nth-child(odd){
+		background-color: rgb(0,0,255);
+	}
+	grid column:nth-child(even){
+		background-color: rgb(0,155,255);
+	}
+	grid row:nth-child(odd){
+		background-color: rgb(111,0,155);
+	}
+	grid row:nth-child(even){
+		background-color: rgb(33,55,255);
+	}
+	box{
+		width: 200px;
+		height: 200px;
+		position: relative;
+		border-radius: 10px;
+		margin: 10px;
+		overflow: hidden;
+	}
+	box div{
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		opacity: 0.7;
+	}
+	</style>
+
+</head>
+<body >
+	<grid column>
+		<row>
+			header
+		</row>
+		<row>
+			<div flex-10>
+				<ul>
+					<li>Item 1</li>
+					<li>Item 2</li>
+					<li>Item 3</li>
+					<li>Item 4</li>
+					<li>Item 5</li>
+				</ul>
+			</div>
+			<div flex-90>main</div>
+		</row>	
+	</grid>
+	<grid content="center" align="center">
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+			<box><div>Title</div><img src="http://rs581.pbsrc.com/albums/ss252/sarge0946/Big%20Cats/tiger1b.jpg~c200" ></box>
+	</grid>
+</body>
+</html>
